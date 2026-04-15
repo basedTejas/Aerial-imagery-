@@ -1,0 +1,73 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:black;
+color:white;
+}
+
+/* Layout */
+.layout{
+display:flex;
+min-height:100vh;
+}
+
+/* Sidebar */
+.sidebar{
+width:260px;
+border-right:2px solid white;
+padding:25px;
+}
+
+.history-item{
+border:2px solid white;
+padding:12px;
+margin-bottom:12px;
+}
+
+/* Main */
+.main{
+flex:1;
+padding:40px;
+text-align:center;
+}
+
+h1{
+font-size:50px;
+}
+
+.upload-box{
+border:3px dashed white;
+padding:40px;
+margin-top:30px;
+}
+
+button{
+padding:15px 30px;
+background:white;
+color:black;
+font-size:18px;
+cursor:pointer;
+}
+
+/* Shortcuts */
+.shortcuts-section{
+margin-top:50px;
+}
+
+.shortcuts-table .row{
+display:flex;
+justify-content:space-between;
+border-bottom:1px solid white;
+padding:10px;
+}
+
+.key-badge{
+background:white;
+color:black;
+padding:5px 10px;
+}

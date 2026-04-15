@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Normal Mode</title>
+
+<!-- Link CSS -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Layout -->
+<div class="layout">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>History</h2>
+        <div id="historyList"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <a href="index.html" class="back">← Back to Home</a>
+
+        <h1 class="title">Normal Mode</h1>
+
+        <!-- Upload Section -->
+        <div class="upload-box">
+
+            <p>Upload or Drag Image</p>
+
+            <input type="file" id="imageUpload" accept="image/*">
+
+            <br>
+
+            <img id="preview">
+
+            <br>
+
+            <button onclick="generateDescription()">Generate Description</button>
+
+        </div>
+
+        <!-- Description -->
+        <p id="description"></p>
+
+        <!-- Audio Controls -->
+        <div class="controls">
+
+            <button onclick="playAudio()">Play</button>
+            <button onclick="pauseAudio()">Pause</button>
+            <button onclick="resumeAudio()">Resume</button>
+            <button onclick="rewindAudio()">Back 10s</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Link JS -->
+<script src="normal.js"></script>
+
+</body>
+</html>
