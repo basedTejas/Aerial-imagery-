@@ -1,8 +1,6 @@
-// ---------- CREATE MAIN LAYOUT ----------
+
 const layout = document.createElement("div");
 layout.className = "layout";
-
-// ---------- SIDEBAR ----------
 const sidebar = document.createElement("div");
 sidebar.className = "sidebar";
 
@@ -11,7 +9,6 @@ sidebar.innerHTML = `
 <div id="historyList"></div>
 `;
 
-// ---------- MAIN ----------
 const main = document.createElement("div");
 main.className = "main";
 
@@ -93,14 +90,11 @@ Upload an image to generate a description and listen to it using audio controls.
 </section>
 `;
 
-// ---------- APPEND ----------
 layout.appendChild(sidebar);
 layout.appendChild(main);
 document.body.appendChild(layout);
 
-// ---------- LOGIC ----------
-
-// Preview Image
+// Preview 
 document.getElementById("imageUpload").addEventListener("change", function () {
     let file = this.files[0];
 
@@ -115,7 +109,7 @@ document.getElementById("imageUpload").addEventListener("change", function () {
     }
 });
 
-// Generate Description
+// Description
 document.getElementById("generateBtn").addEventListener("click", generateDescription);
 
 async function generateDescription() {
@@ -151,7 +145,7 @@ function speak(text) {
     window.speechSynthesis.speak(speech);
 }
 
-// Controls
+// Control
 document.getElementById("playBtn").onclick = () => {
     speak(document.getElementById("description").innerText);
 };
@@ -169,7 +163,7 @@ document.getElementById("rewindBtn").onclick = () => {
     speak(document.getElementById("description").innerText);
 };
 
-// History
+// Hist
 function addHistory(text) {
     let history = document.getElementById("historyList");
 
@@ -180,17 +174,13 @@ function addHistory(text) {
     history.prepend(item);
 }
 
-// Keyboard Shortcuts
+//Shortcuts
 document.addEventListener("keydown", function (e) {
-
     let key = e.key.toLowerCase();
-
     switch (key) {
-
         case "u":
             document.getElementById("imageUpload").click();
             break;
-
         case "r":
             speak(document.getElementById("description").innerText);
             break;
@@ -204,7 +194,7 @@ document.addEventListener("keydown", function (e) {
             break;
 
         case "s":
-            // slow not supported directly
+            
             alert("Slow speech not supported in browser");
             break;
 
